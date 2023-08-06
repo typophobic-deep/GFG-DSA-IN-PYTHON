@@ -1,0 +1,11 @@
+
+class Solution:
+    def removeDuplicate(self, A, N):
+
+        dic={i:0 for i in A}
+        lst=[]
+        for i in range(N):
+            if dic[A[i]]==0:
+                lst.append(A[i])
+                dic[A[i]]=1
+        return lst  
