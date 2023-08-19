@@ -1,4 +1,4 @@
-def Trap(arr):
+def T(arr):
     n=len(arr)
     left=[0]*n
     right=[0]*n
@@ -28,4 +28,4 @@ def Trap(arr):
     
 
 A=[ 1, 0, 2, 0, 1, 0, 3, 1, 0, 2 ]
-Trap(A)
+T(A)
