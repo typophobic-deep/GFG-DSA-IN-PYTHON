@@ -1,3 +1,28 @@
 class Node:
-    def __init__(self,key)
-def reverse(head)
+    def __init__(self,key):
+        self.key=key
+        self.next=None
+def reverse(head):
+    cur=head
+    prev=None
+    while cur!=None:
+        next=cur.next
+        cur.next=prev
+        prev=cur
+        cur=next
+    return prev
+def printlist(head):
+    cur=head
+    while cur!=None:
+        print(cur.key,end=" ")
+        cur=cur.next
+    print()
+head= Node(10)
+head.next= Node(20)
+head.next.next= Node(30)
+head.next.next.next=Node(40) 
+printlist(head)
+reversed_head = reverse(head)  # Store the reversed list in a different variable
+
+print("Reversed linked list:")
+printlist(reversed_head)    
