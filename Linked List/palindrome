@@ -1,0 +1,32 @@
+def reverse(self,head : ListNode) -> ListNode:
+        prev=None
+        cur=head
+        while cur:
+            temp=cur.next
+            cur.next=prev 
+            prev=cur
+            cur=temp
+        return prev   
+    def isPalindrome(self, head: Optional[ListNode]) -> bool:
+        prev=None
+        if head is None or head.next is None:
+            return True
+        fast=slow=head
+        while fast!=None and fast.next!=None:
+            prev=slow
+            slow=slow.next
+            fast=fast.next.next
+        if fast:
+            slow = slow.next 
+            prev=prev.next   
+        reversekahead=self.reverse(slow)
+        prev.next=reversekahead
+        
+        temp1=head
+        temp2=prev.next
+        while temp2:
+            if temp1.val != temp2.val:
+                return False
+            temp1=temp1.next
+            temp2=temp2.next
+        return True
