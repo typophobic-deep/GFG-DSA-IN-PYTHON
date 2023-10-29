@@ -10,7 +10,7 @@ def delhead(head):
     cur=head
     cur.key=cur.next.key
     cur.next=cur.next.next
-    return cur 
+    return head
 def printlist(head):
 
     if head==None:

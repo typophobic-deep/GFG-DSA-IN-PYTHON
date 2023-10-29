@@ -17,7 +17,7 @@ def delete(head,k):
         for i in range(k-2):
             cur=cur.next
         cur.next=cur.next.next
-        return cur
+        return head
 def printlist(head):
     if head==None:
         return
