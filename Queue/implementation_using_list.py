@@ -1,0 +1,9 @@
+lst=[]
+lst.append(10)
+lst.append(20)
+lst.append(30)
+print(lst)
+print(lst.pop(0))
+lst.append(40)
+print(lst[0])
+print(lst[-1])
